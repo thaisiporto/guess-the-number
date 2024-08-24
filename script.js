@@ -60,7 +60,7 @@ function submitNumber() {
     // Encerra o jogo caso as tentativas acabem
     if (attemptCount > maxAttempts) {
         // Texto
-        mine.innerHTML = "You lost!";
+        mine.innerHTML = "You lost! The right number was " + randomNumber + "...";
         // Emoji
         face.style.display = "inline-block";
         face.innerHTML = "sentiment_dissatisfied";
