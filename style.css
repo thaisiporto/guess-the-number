@@ -1,0 +1,116 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor00:#FFF;
+    --cor01:#102C57;
+    --cor02:#1679AB;
+    --cor03:#FFB1B1;
+    --cor04:#ee9999;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: var(--cor01);
+
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column; align-items: center;
+}
+
+h1 {
+    text-align: center;
+    color: var(--cor03);
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    text-align: center;
+    color: var(--cor00);
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+p {
+    color: var(--cor00);
+    text-align: center;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+p#face {
+    color: rgba(255, 255, 255, 0.856);
+    display: none;
+    border-radius: 50%;
+    padding: 3px;
+}
+
+
+div#container {
+    width: 300px;
+    text-align: center;
+    padding: 5px;
+}
+
+
+
+div#game {
+    margin: 30px 10px;
+}
+
+input {
+    margin: 10px auto;
+    display: block;
+    width: 100%;
+}
+
+input[type="number"] {
+    padding: 10px;
+    border: 0;
+    border-bottom: 3px solid var(--cor02);
+}
+
+input[type="button"] {
+    background-color: var(--cor03);
+    padding: 5px 10px;
+
+    cursor: pointer;
+    border: none;
+    border-bottom: 3px solid var(--cor04);
+
+    color: var(--cor01);
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+input[type="button"]:hover {
+    background-color: var(--cor04);
+}
+
+button {
+    color: var(--cor02);
+    background-color: var(--cor00);
+    font-size: 18px;
+    padding: 3px;
+    cursor: pointer;
+
+    border: none;
+    border-bottom: 2px solid #ddd;
+    border-radius: 2px;
+}
+
+button:hover {
+    background-color: #ddd;
+}
