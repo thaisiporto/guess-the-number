@@ -1,7 +1,7 @@
 let randomNumber = Math.ceil(Math.random() * 100);
 
 // Mostrar número
-//window.document.querySelector("p#show").innerHTML = randomNumber;
+window.document.querySelector("p#show").innerHTML = randomNumber;
 
 // Recarregar a Página
 function restartGame() {
@@ -54,7 +54,7 @@ function submitNumber() {
     }
 
     // Encerra o jogo caso as tentativas acabem
-    if (attemptCount > maxAttempts) {
+    if (attemptCount > maxAttempts && Number(myNumber) != randomNumber) {
         // Texto
         mine.innerHTML = `You lost! The right number was <strong>${randomNumber}</strong>...`;
         // Botão
