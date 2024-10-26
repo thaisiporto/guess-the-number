@@ -1,7 +1,7 @@
 let randomNumber = Math.ceil(Math.random() * 100);
 
 // Mostrar número
-// window.document.querySelector("p#show").innerHTML = randomNumber;
+window.document.querySelector("p#show").innerHTML = randomNumber;
 
 // Recarregar a Página
 function restartGame() {
@@ -17,7 +17,7 @@ function submitNumber() {
     let face = window.document.querySelector("p#face");
     let myNumber = window.document.querySelector("input#iNumber").value;
     let attempt = attemptCount;
-    let button = window.document.querySelector("input#iSubmit");
+    let button = window.document.querySelector("button#iSubmit");
 
     // Contagem de tentativas
     if (attemptCount === 1) {
@@ -38,16 +38,12 @@ function submitNumber() {
         } else if (Number(myNumber) < randomNumber){
             mine.innerHTML = myNumber + " is too low. " + attempt;
         } else if (Number(myNumber) === randomNumber){ //VENCEDOR
-            mine.innerHTML = `Congratulations! You're right, it's ${myNumber}!`;
-            // Emoji
-            face.style.display = "inline-block";
-            face.innerHTML = "sentiment_satisfied";
-            face.style.backgroundColor = "#053d08";
+            mine.innerHTML = `Congratulations! You're right, it's <strong>${myNumber}</strong>!`;
             // Botão
             button.disabled = true; // Desativa o botão Submit
-            button.style.backgroundColor = "#ee9999";
-            button.style.opacity = "0.8";
-            document.body.style.backgroundColor = "#147e1a";
+            button.style.backgroundColor = "#FD1A74";
+            button.style.color = "#FFF";
+            document.body.style.background = "#003000";
         }
         break;
     }
@@ -61,15 +57,11 @@ function submitNumber() {
     if (attemptCount > maxAttempts) {
         // Texto
         mine.innerHTML = "You lost! The right number was " + randomNumber + "...";
-        // Emoji
-        face.style.display = "inline-block";
-        face.innerHTML = "sentiment_dissatisfied";
-        face.style.backgroundColor = "#630808";
         // Botão
-        button.disabled = true;
-        button.style.backgroundColor = "#ee9999";
-        button.style.opacity = "0.8";
+        button.disabled = true; // Desativa o botão Submit
+        button.style.backgroundColor = "#FD1A74";
+        button.style.color = "#FFF";
         // Cor de Fundo
-        document.body.style.backgroundColor = "#a11515";
+        document.body.style.background = "#300000";
     }
 }
