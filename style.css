@@ -56,13 +56,6 @@ p {
     letter-spacing: 0.5px;
 }
 
-p#face {
-    color: rgba(255, 255, 255, 0.856);
-    display: none;
-    border-radius: 50%;
-    padding: 3px;
-}
-
 div#container {
     width: 350px;
     text-align: center;
@@ -84,12 +77,16 @@ input {
 }
 
 input[type="number"] {
+    color: var(--cor01v);
     padding: 10px;
     border: 0;
-    border-left: 5px solid var(--cor02);
+    border-left: 0;
     font-size: 18px;
     font-family: "Oxanium", sans-serif;
     text-align: center;
+}
+input[type="number"]:focus, input[type="number"]:hover {
+    border-left: 5px solid var(--cor02);
 }
 
 button[type=submit] {
