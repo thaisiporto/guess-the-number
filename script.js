@@ -56,7 +56,7 @@ function submitNumber() {
     // Encerra o jogo caso as tentativas acabem
     if (attemptCount > maxAttempts) {
         // Texto
-        mine.innerHTML = "You lost! The right number was " + randomNumber + "...";
+        mine.innerHTML = `You lost! The right number was <strong>${randomNumber}</strong>...`;
         // Botão
         button.disabled = true; // Desativa o botão Submit
         button.style.backgroundColor = "#FD1A74";
