@@ -1,7 +1,7 @@
 let randomNumber = Math.ceil(Math.random() * 100);
 
 // Mostrar número
-window.document.querySelector("p#show").innerHTML = randomNumber;
+// window.document.querySelector("p#show").innerHTML = randomNumber;
 
 // Recarregar a Página
 function restartGame() {
